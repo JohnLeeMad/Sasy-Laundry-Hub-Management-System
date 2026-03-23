@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #f8f9fa;
+    --border-light: #e9ecef;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        background: #cabce0;
+    }
+
+    .chat-container {
+        padding: 10px !important;
+    }
+
+    .chat-card {
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border: none;
+    }
+
+    .chat-header {
+        padding: 0.75rem;
+        background-color: white;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .chat-header h5 {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .chat-header small {
+        font-size: 0.75rem;
+        color: var(--text-dark);
+    }
+
+    .chat-messages {
+        max-height: 50vh;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        background-color: var(--light-bg);
+    }
+
+    .message-item {
+        margin-bottom: 0.75rem;
+    }
+
+    .message-bubble {
+        max-width: 80%;
+        padding: 0.5rem 0.75rem;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .message-bubble.own-message {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .message-content {
+        font-size: 0.85rem;
+    }
+
+    .message-meta {
+        font-size: 0.7rem;
+        color: var(--text-dark);
+    }
+
+    .message-status {
+        font-size: 0.65rem;
+        color: var(--accent-color);
+    }
+
+    .date-separator .badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .chat-input {
+        padding: 0.5rem;
+        background-color: white;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .chat-form .form-control {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--border-light);
+        background-color: var(--light-bg);
+    }
+
+    .chat-form .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(100, 68, 153, 0.25);
+    }
+
+    .chat-form .btn {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .chat-form .btn:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}

@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #f8f9fa;
+    --border-light: #e9ecef;
+}
+
+body {
+    background: #cabce0;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), #7a5cb3);
+    color: white;
+}
+
+.stats-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(199, 52, 92, 0.3);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-accent:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 68, 153, 0.3);
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-prelisted {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-ongoing {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-ready-for-pickup {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-claimed {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.status-unclaimed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-pickup {
+    background: linear-gradient(135deg, var(--accent-color), #e55a8a);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.recent-order-item {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quick-action-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.quick-action-card:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Announcement Pagination Styles */
+.announcement-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.announcement-pagination button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.announcement-pagination button:hover:not(:disabled) {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.announcement-pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.announcement-pagination .page-indicator {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.announcement-container {
+    position: relative;
+    min-height: 200px;
+}
+
+.announcement-item {
+    display: none;
+}
+
+.announcement-item.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fix card heights for alignment */
+.card-equal-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-equal-height .card-body {
+    flex: 1;
+}
+
+/* Ensure consistent card layout */
+.order-status-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-orders-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Recent Orders Scrolling */
+.recent-orders-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+}
+
+.recent-orders-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recent-orders-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.recent-orders-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.recent-orders-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Ensure proper spacing for recent order items */
+.recent-order-item:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label.star-label {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.star-rating label.star-label:hover,
+.star-rating label.star-label:hover ~ label.star-label,
+.star-rating input[type="radio"]:checked ~ label.star-label {
+    color: #ffc107;
+}
+
+.star-rating label.star-label:hover {
+    transform: scale(1.1);
+}
+
+/* Review Form Styles */
+.review-form {
+    border-left: 4px solid var(--accent-color);
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.review-form .form-control {
+    font-size: 0.875rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    background-color: var(--light-bg);
+}
+
+.review-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(100, 68, 153, 0.25);
+}
+
+.review-form .btn-sm {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}

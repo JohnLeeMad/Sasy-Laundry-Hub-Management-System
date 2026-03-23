@@ -1,0 +1,13 @@
+/* filepath: c:\laragon\www\laundry-v4\assets\css\contents.css */
+:root {
+    --primary-color: #322266;
+    --accent-color: #B1007C;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
