@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #f8f9fa;
+    --border-light: #e9ecef;
+}
+
+body {
+    background: #cabce0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: none;
+    padding: 2rem 1rem 0.5rem;
+    text-align: center;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    transition: all 0.3s;
+    background-color: #f8f9fa;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(76, 46, 124, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(76, 46, 124, 0.4);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.role-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.role-selector label {
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.role-selector input[type="radio"] {
+    display: none;
+}
+
+.role-selector input[type="radio"]:checked+label {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.forgot-password a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-left: none;
+}
+
+.password-toggle {
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        margin: 15px;
+    }
+}

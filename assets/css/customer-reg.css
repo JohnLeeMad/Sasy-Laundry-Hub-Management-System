@@ -1,0 +1,101 @@
+/* Modal Styles */
+.terms-modal .modal-content {
+    border-radius: 10px;
+}
+.terms-modal .modal-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-bottom: none;
+}
+.terms-modal .modal-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.terms-modal .modal-body {
+    padding: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.terms-modal .modal-footer {
+    padding: 0.75rem 1rem;
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.terms-modal h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.terms-modal p, .terms-modal li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.terms-modal ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+.btn-close-white {
+    filter: invert(1);
+    opacity: 0.8;
+}
+.btn-accept {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    color: white;
+}
+.btn-accept:hover,
+.btn-accept:focus {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: none;
+    box-shadow: 0 5px 15px rgba(76, 46, 124, 0.4);
+    color: white;
+}
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.terms-checkbox input {
+    margin-right: 0.5rem;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.terms-checkbox input:not(:disabled) {
+    cursor: pointer;
+    opacity: 1;
+}
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-open .modal {
+    overflow-y: hidden;
+}
+.scroll-indicator {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: none;
+}
+.form-check-input[readonly] {
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.7;
+}
+.modal-footer .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}

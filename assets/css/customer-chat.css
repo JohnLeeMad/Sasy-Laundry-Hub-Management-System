@@ -1,0 +1,35 @@
+    .alert {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px 20px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .alert .btn-close {
+        margin-left: auto;
+    }
+
+    .alert .btn-close-white {
+        filter: invert(1);
+    }
+
+    .alert i {
+        font-size: 1.5rem;
+    }
+
+    .btn-outline-primary {
+        color: #644499;
+        border-color: #644499;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #644499;
+        border-color: #644499;
+        color: white;
+    }
+
+    .badge {
+        font-size: 0.6rem;
+    }

@@ -1,0 +1,26 @@
+/* Add this to your existing CSS */
+.gradient-bg {
+    background: linear-gradient(135deg, #322266 0%, #B1007C 100%);
+    color: white; /* Ensures text is readable on dark background */
+}
+
+/* Adjust card backgrounds to be visible on gradient */
+.gradient-bg .card {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--text-dark) !important; /* Dark text for cards */
+}
+
+/* Ensure other content is visible */
+.gradient-bg h1,
+.gradient-bg h2,
+.gradient-bg h3,
+.gradient-bg h4,
+.gradient-bg h5,
+.gradient-bg h6 {
+    color: white !important;
+}
+
+/* Alert adjustments */
+.gradient-bg .alert {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
