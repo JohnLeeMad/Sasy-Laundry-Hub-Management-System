@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+}
+
+.modern-action-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modern-action-btn:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.modern-action-btn:hover::before {
+    opacity: 0.1;
+}
+
+.modern-action-btn:active {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Primary (Edit) */
+.modern-action-btn:not(.modern-action-btn-success):not(.modern-action-btn-danger):not(.modern-action-btn-warning):not(.modern-action-btn-info):not(.modern-action-btn-secondary) {
+    color: var(--primary-color);
+}
+
+.modern-action-btn:not(.modern-action-btn-success):not(.modern-action-btn-danger):not(.modern-action-btn-warning):not(.modern-action-btn-info):not(.modern-action-btn-secondary):hover {
+    background: rgba(100, 68, 153, 0.1);
+    color: var(--primary-color);
+}
+
+/* Success (View Receipt) */
+.modern-action-btn-success {
+    color: var(--accent-color);
+}
+
+.modern-action-btn-success:hover {
+    background: rgba(199, 52, 92, 0.1);
+    color: var(--accent-color);
+}
+
+/* Danger (Delete) */
+.modern-action-btn-danger {
+    color: #dc3545;
+}
+
+.modern-action-btn-danger:hover {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+/* Warning (Archive) */
+.modern-action-btn-warning {
+    color: #ffc107;
+}
+
+.modern-action-btn-warning:hover {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+/* Info (Print) */
+.modern-action-btn-info {
+    color: var(--primary-color);
+}
+
+.modern-action-btn-info:hover {
+    background: rgba(100, 68, 153, 0.1);
+    color: var(--primary-color);
+}
+
+/* Secondary (Info/Details) */
+.modern-action-btn-secondary {
+    color: #6c757d;
+}
+
+.modern-action-btn-secondary:hover {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+}
+
+/* Focus states for accessibility */
+.modern-action-btn:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .modern-action-btn {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}

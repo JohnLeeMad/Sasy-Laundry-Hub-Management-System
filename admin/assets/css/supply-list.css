@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(76, 46, 124, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    border-color: #5a6268;
+    color: white;
+    box-shadow: 0 5px 15px rgba(90, 98, 104, 0.4);
+}
+
+.btn-danger {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(199, 52, 92, 0.4);
+}

@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #644499;
+    --accent-color: #c7345c;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+.financial-report {
+    background: white;
+    padding: 2rem;
+}
+
+.financial-report h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.financial-report h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.table > :not(caption) > * > * {
+    padding: 1rem;
+}
+
+.revenue-row {
+    background-color: rgba(100, 68, 153, 0.05);
+}
+
+.expense-row td {
+    border-bottom: 1px solid #eee;
+}
+
+.total-row {
+    background-color: var(--light-bg);
+    font-weight: 600;
+}
+
+.amount-column {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+.period-text {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-filter {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-print {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-add {
+    background: #11998e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .btn, form, .modal {
+        display: none !important;
+    }
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .total-row {
+        background-color: #f8f9fa !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
